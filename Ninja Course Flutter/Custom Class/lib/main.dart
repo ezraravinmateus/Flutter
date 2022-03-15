@@ -18,7 +18,7 @@ class _QuoteListState extends State<QuoteList>
 	List<Quote> quotes = 
 	[
 		Quote(author: "Oscar Wilde", text: "Be yourself; everyone else is already taken"),
-		Quote(author: "Oscar Wilde", text: "Be yourself; everyone else is already taken"),
+		Quote(author: "Albert Einstein", text: "I have nothing to declare except my genius"),
 		Quote(author: "Oscar Wilde", text: "Be yourself; everyone else is already taken")
 	];
 
