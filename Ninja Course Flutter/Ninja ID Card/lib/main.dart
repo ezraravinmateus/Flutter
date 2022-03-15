@@ -21,6 +21,8 @@ class _QuoteListState extends State<QuoteList>
 		"The truth is rarely pure and never simple"
 	];
 
+	
+
 	@override
 	Widget build(BuildContext context) 
 	{
@@ -36,10 +38,7 @@ class _QuoteListState extends State<QuoteList>
 			),
 			body: Column
 			(
-				children: quotes.map((quote)
-				{
-					return Text(quote);
-				}).toList(),
+				children: quotes.map((quote) => Text(quote)).toList(),
 			),
 		);
 	}
