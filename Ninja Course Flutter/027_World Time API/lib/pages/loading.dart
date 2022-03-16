@@ -14,13 +14,24 @@ class _LoadingState extends State<Loading>
 	void getTime() async
 	{
 		// Make request
-		Response response = await get(Uri.parse('https://worldtimeapi.org/api/timezone/Europe/London'));
+		Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezone/Asia/Jakarta'));
 		Map data = jsonDecode(response.body);
-		print(data);
+		// print(data);
 
 		// Get Properties from data
-		String abbreviation = data['abbreviation'];
-		print(abbreviation);
+		String datetime = data['datetime'];
+		String offset = data['utc_offset'].substring(1,3);
+		int iOffset = int.parse(offset);
+
+		// print(datetime);
+		// print(offset);
+
+		// Create DateTime Object
+
+		DateTime now = DateTime.parse(datetime);
+		now = now.add(Duration(hours : iOffset));
+		print(now);
+
 	}
 
 	int counter = 0;
