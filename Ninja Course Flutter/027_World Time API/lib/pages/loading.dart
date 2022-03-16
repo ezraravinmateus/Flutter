@@ -14,9 +14,13 @@ class _LoadingState extends State<Loading>
 	void getTime() async
 	{
 		// Make request
-		Response response = await get(Uri.http('http://worldtimeapi.org', '/api/timezone/Europe/London'));
+		Response response = await get(Uri.parse('https://worldtimeapi.org/api/timezone/Europe/London'));
 		Map data = jsonDecode(response.body);
 		print(data);
+
+		// Get Properties from data
+		String abbreviation = data['abbreviation'];
+		print(abbreviation);
 	}
 
 	int counter = 0;
