@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() => runApp(MaterialApp
 (
@@ -22,11 +23,6 @@ class _QuoteListState extends State<QuoteList>
 		Quote(author: "Oscar Wilde", text: "Be yourself; everyone else is already taken")
 	];
 
-	Widget quoteTemplate(quote)
-	{
-		return new QuoteCard(quote : quote);
-	}
-
 	@override
 	Widget build(BuildContext context) 
 	{
@@ -43,52 +39,8 @@ class _QuoteListState extends State<QuoteList>
 			body: Column
 			(
 				crossAxisAlignment: CrossAxisAlignment.start,
-				children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+				children: quotes.map((quote) => QuoteCard(quote : quote)).toList(),
 			),
-		);
-	}
-}
-
-class QuoteCard extends StatelessWidget 
-{
-
-	final Quote quote;
-	QuoteCard({required this.quote});
-
-	@override
-	Widget build(BuildContext context) {
-		return Card
-		(
-			margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
-			child: Padding(
-			padding: const EdgeInsets.all(12.0),
-			child: Column
-			(
-				crossAxisAlignment: CrossAxisAlignment.stretch,
-				children: <Widget>
-				[
-					Text
-					(
-						quote.text,
-						style: TextStyle
-						(
-							fontSize: 16,
-							color: Colors.grey[600],
-						),
-					),
-					SizedBox(height: 6,),
-					Text
-					(
-						quote.author,
-						style: TextStyle
-						(
-							fontSize: 12,
-							color: Colors.grey[600],
-						),
-					)
-				],
-			),
-			)
 		);
 	}
 }
