@@ -16,7 +16,21 @@ class _HomeState extends State<Home>
 		(
 			body: SafeArea
 			(
-				child: Text("Home Screen"),
+				child: Column
+				(
+					children: <Widget>
+					[
+						FlatButton.icon
+						(
+							onPressed: ()
+							{
+								Navigator.pushNamed(context, '/location');
+							},
+							icon: Icon(Icons.edit_location),
+							label: Text("Edit Location"),
+						)
+					],
+				)
 			),	
 		);
 	}
