@@ -8,6 +8,7 @@ import 'package:widget_lifecycle/pages/loading.dart';
 void main() => runApp(MaterialApp
 (
 	initialRoute: '/home',
+
 	routes:
 	{
 		'/' : (context) => Loading(),
