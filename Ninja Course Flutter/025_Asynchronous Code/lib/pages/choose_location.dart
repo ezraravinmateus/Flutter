@@ -18,12 +18,12 @@ class _ChooseLocationState extends State<ChooseLocation>
 		});
 
 		// Simulate network request to get Bio of username
-		await Future.delayed(Duration(seconds: 2), ()
+		String bio = await Future.delayed(Duration(seconds: 2), ()
 		{
-			print("Vega, musician & egg collector");
+			return "Vega, musician & egg collector";
 		});
-
-		print("Statement");
+ 
+		print("$username - $bio");
 	}
 
 	int counter = 0;
@@ -32,6 +32,7 @@ class _ChooseLocationState extends State<ChooseLocation>
 	{
 		super.initState();
 		getData();
+		print("Hey there");
 	}
 
 	@override
