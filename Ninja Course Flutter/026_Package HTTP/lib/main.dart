@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:async_code/pages/home.dart';
-import 'package:async_code/pages/choose_location.dart';
-import 'package:async_code/pages/loading.dart';
+import 'package:package_http/pages/home.dart';
+import 'package:package_http/pages/choose_location.dart';
+import 'package:package_http/pages/loading.dart';
 void main() => runApp(MaterialApp
 (
 	initialRoute: '/home',
