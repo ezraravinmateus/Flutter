@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:package_http/pages/home.dart';
-import 'package:package_http/pages/choose_location.dart';
-import 'package:package_http/pages/loading.dart';
+import 'package:worldtime_custom_class/pages/home.dart';
+import 'package:worldtime_custom_class/pages/choose_location.dart';
+import 'package:worldtime_custom_class/pages/loading.dart';
+
 void main() => runApp(MaterialApp
 (
 	initialRoute: '/',
