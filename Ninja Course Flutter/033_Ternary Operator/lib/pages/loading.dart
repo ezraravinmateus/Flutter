@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
-import 'package:loader_spinner/services/world_time.dart';
+import 'package:ternary_operator/services/world_time.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget 
@@ -20,12 +20,13 @@ class _LoadingState extends State<Loading>
 	{
 		WorldTime instance = WorldTime(location: 'Jakarta', flagURL: 'jakarta.png', url: 'Asia/Jakarta');
 		await instance.getTime();
-		// Navigator.pushReplacementNamed(context, '/home', arguments: 
-		// {
-		// 	'location': instance.location,
-		// 	'flag': instance.flagURL,
-		// 	'time': instance.time,
-		// }); 
+		Navigator.pushReplacementNamed(context, '/home', arguments: 
+		{
+			'location': instance.location,
+			'flag': instance.flagURL,
+			'time': instance.time,
+			'isDaytime' : instance.isDaytime
+		}); 
 	}
 
 	int counter = 0;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loader_spinner/pages/loading.dart';
+import 'package:ternary_operator/pages/loading.dart';
 class ChooseLocation extends StatefulWidget 
 {
 	@override
