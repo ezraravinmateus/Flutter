@@ -17,7 +17,7 @@ class WorldTime
 		try
 		{
 			// Make request
-			Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezones/$url'));
+			Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezone/$url'));
 			Map data = jsonDecode(response.body);
 			// print(data);
 
