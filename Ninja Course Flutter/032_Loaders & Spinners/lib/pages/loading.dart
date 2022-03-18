@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:loaders_and_spinners/services/world_time.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget 
 {
@@ -40,10 +41,14 @@ class _LoadingState extends State<Loading>
 	{
 		return Scaffold
 		(
-			body: Padding
+			backgroundColor: Colors.blue[900],
+			body: Center
 			(
-				padding: EdgeInsets.all(50),
-				child: Text(time),
+				child: SpinKitRotatingCircle
+				(
+					color: Colors.white,
+					size: 50,
+				),
 			)
 		);
 	}
