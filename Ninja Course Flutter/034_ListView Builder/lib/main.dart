@@ -8,7 +8,7 @@ void main() => runApp(MaterialApp
 (
 	debugShowCheckedModeBanner: false,
 	initialRoute: '/',
-
+	
 	routes:
 	{
 		'/' : (context) => Loading(),

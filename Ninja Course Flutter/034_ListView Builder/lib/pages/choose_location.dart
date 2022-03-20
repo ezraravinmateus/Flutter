@@ -23,6 +23,11 @@ class _ChooseLocationState extends State<ChooseLocation>
 		WorldTime(url: 'Asia/Jakarta', location: 'Jakarta', flagURL: 'indonesia.png'),
 	];
 
+	void updateTime(index) async 
+	{
+		worldTime
+	}
+
 
 	@override
 	Widget build(BuildContext context) 
@@ -37,12 +42,31 @@ class _ChooseLocationState extends State<ChooseLocation>
 				centerTitle: true,
 				elevation: 0,
 			),
-			body: RaisedButton
+			body: ListView.builder
 			(
-				onPressed: ()
+				itemCount : locations.length,
+				itemBuilder: (context, index)
 				{
-					
+					return Card
+					(
+						child: ListTile
+						(
+							onTap: ()
+							{
+								print(locations[index].location);
+							},
+							title: Text(locations[index].location),
+							leading: CircleAvatar
+							(
+								backgroundImage: AssetImage
+								(
+									'assets/${locations[index].flagURL}'
+								),
+							),
+						),
+					);
 				},
+
 			),
 		);
 	}
