@@ -1,0 +1,9 @@
+Akses Server: 
+http://ringgas.id/cpanel
+Username = rinh5498
+Pass = sePFUB3hdnY129
+
+Cari menu PHP MyAdmin:
+DB = rinh5498_it603_pam
+User = rinh5498_it603_pam
+Pass = rinh5498_it603_pam 
