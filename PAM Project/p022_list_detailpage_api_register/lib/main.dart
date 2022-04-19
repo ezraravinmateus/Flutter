@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/landing_page.dart';
 
+const baseUrl = 'https://www.ringgas.id/develop/01_it604_pam/1320023/mobapps/';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(statusBarColor: Colors.transparent));
