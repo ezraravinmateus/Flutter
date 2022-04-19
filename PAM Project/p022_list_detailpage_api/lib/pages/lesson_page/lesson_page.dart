@@ -15,7 +15,7 @@ class LessonPage extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
-          title: Text('LESSONS'),
+          title: Text('THIS IS DA LESSON!'),
           centerTitle: true,
           floating: true,
           brightness: Brightness.dark,
@@ -78,7 +78,7 @@ class ListNewsViewLessonPage extends StatelessWidget {
                 },
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
                 child: Material(
-                  color: Colors.white10,
+                  color: Colors.blue,
                   borderRadius: const BorderRadius.all(Radius.circular(5)),
                   child: SizedBox(
                     height: 120,
