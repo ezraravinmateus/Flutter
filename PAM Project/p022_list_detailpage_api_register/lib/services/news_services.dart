@@ -4,7 +4,8 @@ import '../models/models.dart';
 import 'package:http/http.dart' as http;
 
 //const baseUrl = 'http://generasiterpilih.or.id/mobapps/';
-const baseUrl = 'https://ringgas.id/develop/mobapps/';
+// const baseUrl = 'https://ringgas.id/develop/mobapps/';
+const baseUrl = 'https://www.ringgas.id/develop/01_it604_pam/1320023/mobapps/';
 
 class NewsServices {
   static Future<ApiReturnValue<List<NewsModel>>> getNews() async {
